@@ -92,26 +92,28 @@ void Database_write(struct Connection *conn){
   if (rc == -1)
     die("Cannot flush database.", conn);
 }
-void Database_create(struct Connection *conn){
+void Database_create(struct Connection *conn, unsigned int max_rows){
   int i = 0;
-  for (i = 0; i < MAX_ROWS; i++){
+  for (i = 0; i < max_rows; i++){
     struct Address addr = {.id = i, .set = 0};
     conn->db->rows[i] = addr;
   }
 }
 
-void Database_set(struct Connection *conn, int id, const char *name, const char *email){
+void Database_set(struct Connection *conn, int id,
+    const char *name, const char *email,
+    unsigned int max_data){
   struct Address *addr = &conn->db->rows[id];
   if (addr->set)
     die("Already set, delete it first!", conn);
 
   addr->set = 1;
-  char *res = strncpy(addr->name, name, MAX_DATA);
+  char *res = strncpy(addr->name, name, max_data);
   res[sizeof(addr->name) - 1] = '\0';
   if (!res)
     die("Name copy failed!", conn);
 
-  res = strncpy(addr->email, email, MAX_DATA);
+  res = strncpy(addr->email, email, max_data);
   res[sizeof(addr->email) - 1] = '\0';
   if (!res)
     die("Email copy failed!", conn);
@@ -132,11 +134,11 @@ void Database_delete(struct Connection *conn, int id){
   conn->db->rows[id] = addr;
 }
 
-void Database_list(struct Connection *conn){
+void Database_list(struct Connection *conn, unsigned int max_rows){
   int i = 0;
   struct Database *db = conn->db;
 
-  for (i = 0; i < MAX_ROWS; i++){
+  for (i = 0; i < max_rows; i++){
     struct Address *cur = &db->rows[i];
 
     if (cur->set){
@@ -153,7 +155,7 @@ int main(int argc, char *argv[]){
     strcat(l, " <dbfile> <action> [action params]");*/
     die(l, conn);
   }
-
+  unsigned int max_rows = 100, max_data = 512;
   char *filename = argv[1];
   char action = argv[2][0];
   conn = Database_open(filename, action);
@@ -162,7 +164,8 @@ int main(int argc, char *argv[]){
   if (id >= MAX_ROWS) die("There is not that many records!", conn);
   switch (action){
     case 'c':
-      Database_create(conn);
+      max_rows = atoi(argv[3]);
+      Database_create(conn, max_rows);
       Database_write(conn);
       break;
     case 'g':
@@ -171,9 +174,10 @@ int main(int argc, char *argv[]){
       Database_get(conn, id);
       break;
     case 's':
-      if (argc != 6)
-        die("Need id, name, email to set!", conn);
-      Database_set(conn, id, argv[4], argv[5]);
+      if (argc != 7)
+        die("Need id, name, email and database max data to set!", conn);
+      max_data = atoi(argv[6]);
+      Database_set(conn, id, argv[4], argv[5], max_data);
       printf("Address id=%d, name=%s and %s filled in the database %s\n", id, argv[4], argv[5], filename);;
       Database_write(conn);
       break;
@@ -185,7 +189,8 @@ int main(int argc, char *argv[]){
       break;
     case 'l':
       printf("id   name       email\n---------------------------------\n");
-      Database_list(conn);
+      max_data = atoi(argv[3]);
+      Database_list(conn, max_rows);
       break;
     default:
       die("Invalid action: c=create, g=get, s=set, d=del, l=list", conn);

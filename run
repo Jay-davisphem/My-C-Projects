@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -e;
+
+
+#./*mng femi.dat c 99;
+#./*mng femi.dat s 2 fei joh@gmail.com 100;
+./*mng femi.dat l 5;
