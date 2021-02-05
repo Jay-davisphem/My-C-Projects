@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdint.h>
 /*int main(int argc, char * argv[]){
   int arr[] = {76, 45, 93, 4, 6, 4, 45, 5};
   char rt[5] = {'r', 'i', 'y', 'o', '\0'};
@@ -34,7 +34,12 @@
     printf("down() called. k= %2d, j= %2d\n", k , j);
   }
 int main(void){
-  int i = 0;
+/*  int i = 0;
   for (i = 0; i < 3; i++) up();
-  for (i = 0; i < 2; i++) down();
+  for (i = 0; i < 2; i++) down();*/
+
+  printf("UINT32_MAX: %u\n", UINT32_MAX);
+  printf("INT32_IN: %i\n", INT32_MIN);
+  printf("INT32_MAX: %i\n", INT32_MAX);
+ // printf("INT64_MIN: %lg", INT64_MIN);
 }
