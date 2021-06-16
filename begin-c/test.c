@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include "myString/myString.h"
 /*int main(int argc, char * argv[]){
   int arr[] = {76, 45, 93, 4, 6, 4, 45, 5};
   char rt[5] = {'r', 'i', 'y', 'o', '\0'};
@@ -16,7 +17,7 @@
   
   fopen(filename, "r+");
   fputs("Oluwafemi Boy.\nI love you o.", cur);
-  printf("%d %s\n", TMP_MAX, filename);*/
+  printf("%d %s\n", TMP_MAX, filename);
 
   static int j;
   static int k;
@@ -32,14 +33,20 @@
     k--;
 
     printf("down() called. k= %2d, j= %2d\n", k , j);
-  }
+  }*/
 int main(void){
 /*  int i = 0;
   for (i = 0; i < 3; i++) up();
-  for (i = 0; i < 2; i++) down();*/
+  for (i = 0; i < 2; i++) down();
 
   printf("UINT32_MAX: %u\n", UINT32_MAX);
   printf("INT32_IN: %i\n", INT32_MIN);
   printf("INT32_MAX: %i\n", INT32_MAX);
- // printf("INT64_MIN: %lg", INT64_MIN);
+  printf("INT64_MIN: %lg", INT64_MIN);*/ 
+
+  struct string *s = makeString("Oluwafemi");
+
+  int pos = 5;
+  printf("\nThe char in %d pos is %c\nand it's of total length %d", pos, stringCharAt(s, pos), stringLength(s));
+  destroyString(s);
 }

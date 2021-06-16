@@ -1,0 +1,245 @@
+Reading data from 'callgrind.out.26286'...
+--------------------------------------------------------------------------------
+Profile data file 'callgrind.out.26286' (creator: callgrind-3.16.1)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 1528097
+Trigger: Program termination
+Profiled target:  duffs_dev (PID 26286, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                 
+--------------------------------------------------------------------------------
+8,011,283 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                   file:function
+--------------------------------------------------------------------------------
+51,864,675 (647.4%)  ???:free'2 [/system/lib/libc.so]
+51,863,570 (647.4%)  ???:je_free'2 [/system/lib/libc.so]
+26,219,366 (327.3%)  ???:getline'2 [/system/lib/libc.so]
+26,218,385 (327.3%)  ???:getdelim'2 [/system/lib/libc.so]
+26,148,174 (326.4%)  ???:read_spec_entries(char*, int, ...)'2 [/system/lib/libc.so]
+21,663,905 (270.4%)  ???:list_add_after_len(prefix_node**, char const*, context_node*)'2 [/system/lib/libc.so]
+13,030,400 (162.7%)  ???:operator new(unsigned int)'2 [/system/lib/libc.so]
+12,981,671 (162.0%)  ???:strdup'2 [/system/lib/libc.so]
+11,323,012 (141.3%)  ???:__dl__ZN6soinfo17call_constructorsEv'2 [/system/bin/linker]
+ 8,011,281 (100.0%)  ???:__dl___linker_init [/system/bin/linker]
+ 6,324,597 (78.95%)  ???:__dl__Z14find_librariesP19android_namespace_tP6soinfoPKPKcjPS2_PNSt3__16vectorIS2_NS8_9allocatorIS2_EEEEjiPK17android_dlextinfobbRNS8_13unordered_mapIPKS1_9ElfReaderNS8_4hashISJ_EENS8_8equal_toISJ_EENSA_INS8_4pairIKSJ_SK_EEEEEEPNS9_IS0_NSA_IS0_EEEE [/system/bin/linker]
+ 5,791,974 (72.30%)  ???:__dl__ZN6soinfo10link_imageERK10LinkedListIS_19SoinfoListAllocatorES4_PK17android_dlextinfo [/system/bin/linker]
+ 5,628,653 (70.26%)  ???:__dl__ZN6soinfo17call_constructorsEv [/system/bin/linker]
+ 5,615,394 (70.09%)  ???:__dl__ZL10call_arrayIPFviPPcS1_EEvPKcPT_jbS5_ [/system/bin/linker]
+ 5,615,086 (70.09%)  ???:__dl__ZL13call_functionPKcPFviPPcS2_ES0_ [/system/bin/linker]
+ 5,606,056 (69.98%)  ???:__dl__ZL13call_functionPKcPFviPPcS2_ES0_'2 [/system/bin/linker]
+ 5,589,584 (69.77%)  ???:__libc_preinit() [/system/lib/libc.so]
+ 5,589,574 (69.77%)  ???:__libc_preinit_impl(KernelArgumentBlock&) [/system/lib/libc.so]
+ 4,835,473 (60.36%)  ???:pthread_once [/system/lib/libc.so]
+ 4,835,398 (60.36%)  ???:netdClientInitImpl() [/system/lib/libc.so]
+ 4,835,381 (60.36%)  ???:dlopen [/system/lib/libdl.so]
+ 4,816,459 (60.12%)  ???:__dl__Z8__dlopenPKciPKv [/system/bin/linker]
+ 4,816,456 (60.12%)  ???:__dl__ZL10dlopen_extPKciPK17android_dlextinfoPKv [/system/bin/linker]
+ 4,812,935 (60.08%)  ???:__dl__Z9do_dlopenPKciPK17android_dlextinfoPKv [/system/bin/linker]
+ 4,788,744 (59.77%)  ???:__dl__ZL12find_libraryP19android_namespace_tPKciPK17android_dlextinfoP6soinfo [/system/bin/linker]
+ 4,757,373 (59.38%)  ???:__dl__Z16soinfo_do_lookupP6soinfoPKcPK12version_infoPS0_RK10LinkedListIS_19SoinfoListAllocatorESB_PPK9elf32_sym [/system/bin/linker]
+ 4,032,383 (50.33%)  ???:__dl__ZNK6soinfo19find_symbol_by_nameER10SymbolNamePK12version_infoPPK9elf32_sym [/system/bin/linker]
+ 3,362,038 (41.97%)  ???:__dl__ZNK6soinfo10gnu_lookupER10SymbolNamePK12version_infoPj [/system/bin/linker]
+ 3,309,135 (41.31%)  ???:__dl__ZN6soinfo8relocateI20plain_reloc_iteratorEEbRK14VersionTrackerOT_RK10LinkedListIS_19SoinfoListAllocatorESB_ [/system/bin/linker]
+ 2,462,915 (30.74%)  ???:__dl__ZN6soinfo8relocateI21packed_reloc_iteratorI15sleb128_decoderEEEbRK14VersionTrackerOT_RK10LinkedListIS_19SoinfoListAllocatorESD_ [/system/bin/linker]
+   914,777 (11.42%)  ???:initialize_properties_from_file(char const*)'2 [/system/lib/libc.so]
+   761,567 ( 9.51%)  ???:__dl_strcmp [/system/bin/linker]
+   754,082 ( 9.41%)  ???:__libc_init_globals(KernelArgumentBlock&) [/system/lib/libc.so]
+   738,507 ( 9.22%)  ???:fopen [/system/lib/libc.so]
+   733,453 ( 9.16%)  ???:__libc_init_common(KernelArgumentBlock&) [/system/lib/libc.so]
+   733,224 ( 9.15%)  ???:getline [/system/lib/libc.so]
+   733,197 ( 9.15%)  ???:getdelim [/system/lib/libc.so]
+   731,678 ( 9.13%)  ???:__system_properties_init [/system/lib/libc.so]
+   727,762 ( 9.08%)  ???:initialize_properties() [/system/lib/libc.so]
+   727,067 ( 9.08%)  ???:initialize_properties_from_file(char const*) [/system/lib/libc.so]
+   722,119 ( 9.01%)  ???:read_spec_entries(char*, int, ...) [/system/lib/libc.so]
+   715,230 ( 8.93%)  ???:free [/system/lib/libc.so]
+   715,215 ( 8.93%)  ???:je_free [/system/lib/libc.so]
+   713,048 ( 8.90%)  ???:list_add_after_len(prefix_node**, char const*, context_node*) [/system/lib/libc.so]
+   707,846 ( 8.84%)  ???:operator new(unsigned int) [/system/lib/libc.so]
+   706,528 ( 8.82%)  ???:strdup [/system/lib/libc.so]
+   552,234 ( 6.89%)  ???:__dl___system_properties_init [/system/bin/linker]
+   551,537 ( 6.88%)  ???:__dl__ZL21initialize_propertiesv [/system/bin/linker]
+   551,499 ( 6.88%)  ???:__dl__ZL31initialize_properties_from_filePKc [/system/bin/linker]
+   525,113 ( 6.55%)  ???:__dl__ZL12load_libraryP19android_namespace_tP8LoadTaskP15ZipArchiveCachePNSt3__16vectorIS2_NS5_9allocatorIS2_EEEEib [/system/bin/linker]
+   454,407 ( 5.67%)  ???:__dl__ZL11realpath_fdiPNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE [/system/bin/linker]
+   445,068 ( 5.56%)  ???:__dl__ZNSt3__16vectorIcNS_9allocatorIcEEEC2Ej [/system/bin/linker]
+   360,066 ( 4.49%)  ???:__dl__ZL21open_library_on_pathsP15ZipArchiveCachePKcPxRKNSt3__16vectorINS4_12basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEENS9_ISB_EEEEPSB_ [/system/bin/linker]
+   326,111 ( 4.07%)  ???:__dl__Z25find_verdef_version_indexPK6soinfoPK12version_infoPt [/system/bin/linker]
+   227,499 ( 2.84%)  ???:__dl__ZN21packed_reloc_iteratorI15sleb128_decoderE4nextEv [/system/bin/linker]
+   220,760 ( 2.76%)  ???:strndup [/system/lib/libc.so]
+   215,656 ( 2.69%)  ???:__dl__ZL17read_spec_entriesPciz [/system/bin/linker]
+   190,746 ( 2.38%)  ???:malloc [/system/lib/libc.so]
+   188,071 ( 2.35%)  ???:je_malloc [/system/lib/libc.so]
+   155,820 ( 1.95%)  ???:__dl__ZN15sleb128_decoder9pop_frontEv [/system/bin/linker]
+   143,061 ( 1.79%)  ???:__dl__ZN6soinfo19lookup_version_infoERK14VersionTrackerjPKcPPK12version_info [/system/bin/linker]
+   137,052 ( 1.71%)  duffs_dev.c:main'2 [/data/data/com.termux/files/home/c_file/My-C-Projects/duffs_dev]
+   136,071 ( 1.70%)  ???:__dl__ZNK6soinfo10get_stringEj [/system/bin/linker]
+   133,946 ( 1.67%)  ???:je_arena_malloc_hard [/system/lib/libc.so]
+   129,000 ( 1.61%)  ???:__dl_malloc [/system/bin/linker]
+   126,789 ( 1.58%)  ???:std::__1::locale::id::__get()'2 [/system/lib/libc++.so]
+   120,816 ( 1.51%)  ???:__dl__ZN21LinkerMemoryAllocator5allocEj [/system/bin/linker]
+   118,441 ( 1.48%)  ???:strcmp [/system/lib/libc.so]
+   117,860 ( 1.47%)  ???:strnlen [/system/lib/libc.so]
+    99,503 ( 1.24%)  ???:__cxa_atexit [/system/lib/libc.so]
+    99,381 ( 1.24%)  ???:_start [/data/data/com.termux/files/home/c_file/My-C-Projects/duffs_dev]
+    99,379 ( 1.24%)  ???:_start_main [/data/data/com.termux/files/home/c_file/My-C-Projects/duffs_dev]
+    99,359 ( 1.24%)  ???:__libc_init [/system/lib/libc.so]
+    99,144 ( 1.24%)  /data/data/com.termux/files/home/c_file/My-C-Projects/duffs_dev.c:main
+    97,036 ( 1.21%)  duffs_dev.c:main [/data/data/com.termux/files/home/c_file/My-C-Projects/duffs_dev]
+    96,653 ( 1.21%)  duffs_dev.c:valid_copy [/data/data/com.termux/files/home/c_file/My-C-Projects/duffs_dev]
+    95,350 ( 1.19%)  ???:je_malloc_mutex_init'2 [/system/lib/libc.so]
+    79,795 ( 1.00%)  ???:__dl_memchr [/system/bin/linker]
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: duffs_dev.c
+--------------------------------------------------------------------------------
+Ir              
+
+     .           #include <stdio.h>
+     .           #include <string.h>
+     .           #include "dbg.h"
+     .           
+     4 ( 0.00%)  int normal_copy(char *from, char *to, int count){
+     2 ( 0.00%)    int i = 0;
+ 8,005 ( 0.10%)    for (i = 0; i < count; i++){
+ 8,000 ( 0.10%)      to[i] = from[i];
+     .             }
+     3 ( 0.00%)    return i;
+     .           }
+     .           
+     4 ( 0.00%)  int duffs_device(char *from, char *to, int count){
+     .             {
+     6 ( 0.00%)      int n = (count + 7) / 8;
+     .           
+     8 ( 0.00%)      switch (count % 8){
+     .                 case 0:
+     1 ( 0.00%)          do {
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 7:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 6:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 5:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 4:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 3:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 2:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 1:
+   928 ( 0.01%)            *to++ = *from++;
+   696 ( 0.01%)          } while (--n > 9);
+     1 ( 0.00%)      }
+     .             }
+     3 ( 0.00%)    return count;
+40,382 ( 0.50%)  => duffs_dev.c:main'2 (1x)
+     .           }
+     .           
+     4 ( 0.00%)  int femi_device(char *from, char *to, int count){
+     .             {
+     6 ( 0.00%)      int n = (count + 7) / 8;
+     .              
+     9 ( 0.00%)      switch (count % 8){
+     .                 case 0:
+   928 ( 0.01%)  again:    *to++ = *from++;
+     .           
+     .                     case 7:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 6:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 5:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 4:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 3:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 2:
+   928 ( 0.01%)            *to++ = *from++;
+     .                     case 1:
+   928 ( 0.01%)            *to++ = *from++;
+   696 ( 0.01%)          if (--n > 9)
+   115 ( 0.00%)            goto again;
+     1 ( 0.00%)      }
+     .             }
+     3 ( 0.00%)    return count;
+16,035 ( 0.20%)  => duffs_dev.c:main'2 (1x)
+     .           }
+     .           
+    24 ( 0.00%)  int valid_copy(char *data, int count, char expects){
+     8 ( 0.00%)    int i = 0;
+32,020 ( 0.40%)    for (i = 0; i < count; i++){
+28,000 ( 0.35%)      if (data[i] != expects){
+     .                 log_err("[ %d] %c != %c", i, data[i], expects);
+     .                 return 0;
+     .               }
+ 4,000 ( 0.05%)    }
+     8 ( 0.00%)    return 1;
+    12 ( 0.00%)  }
+80,635 ( 1.01%)  => duffs_dev.c:main'2 (1x)
+     .           
+    10 ( 0.00%)  int main(int argc, char *argv[]){
+    50 ( 0.00%)    char from[1000] = { 'a' };
+96,653 ( 1.21%)  => duffs_dev.c:valid_copy (1x)
+   320 ( 0.00%)  => ???:memset (4x)
+     .             char to[1000] = { 'c' };
+     .             int rc = 0;
+     .             
+     .             memset(from, 'x', 1000);
+     .             memset(to, 'y', 1000);
+     2 ( 0.00%)    check(valid_copy(to, 1000, 'y'), "Not initiated right.");
+     .           
+     3 ( 0.00%)    rc = normal_copy(from, to, 1000);
+16,014 ( 0.20%)  => duffs_dev.c:normal_copy (1x)
+     3 ( 0.00%)    check(rc == 1000, "Normal copy failed %d.", rc);
+     6 ( 0.00%)    check(valid_copy(to, 1000, 'x'), "Normal copy failed.");
+16,018 ( 0.20%)  => duffs_dev.c:valid_copy'2 (1x)
+     .           
+    13 ( 0.00%)    memset(to, 1000, 'y');
+48,529 ( 0.61%)  => duffs_dev.c:duffs_device (1x)
+    39 ( 0.00%)  => ???:memset (1x)
+     .           
+     1 ( 0.00%)    rc = duffs_device(from, to, 1000);
+     3 ( 0.00%)    check(rc == 1000, "Duff's device failed %d.", rc);
+     6 ( 0.00%)    check(valid_copy(to, 1000, 'x'), "Duff's device failed.");
+16,018 ( 0.20%)  => duffs_dev.c:valid_copy'2 (1x)
+     .           
+    13 ( 0.00%)    memset(to, 1000, 'y');
+24,297 ( 0.30%)  => duffs_dev.c:femi_device (1x)
+    39 ( 0.00%)  => ???:memset (1x)
+     .           
+     1 ( 0.00%)    rc = femi_device(from, to, 1000);
+     3 ( 0.00%)    check(rc == 1000, "Femi's device failed %d.", rc);
+     6 ( 0.00%)    check(valid_copy(to, 1000, 'x'), "Femi,'s device failed.");
+16,018 ( 0.20%)  => duffs_dev.c:valid_copy'2 (1x)
+     .           
+     3 ( 0.00%)    return 0;
+     .           error:
+     .             return 1;
+     3 ( 0.00%)  }
+
+    25 ( 0.00%)  <counts for unidentified lines in duffs_dev.c>
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /data/data/com.termux/files/home/c_file/My-C-Projects/duffs_dev.c
+--------------------------------------------------------------------------------
+  No information has been collected for /data/data/com.termux/files/home/c_file/My-C-Projects/duffs_dev.c
+
+--------------------------------------------------------------------------------
+Ir              
+--------------------------------------------------------------------------------
+96,613 ( 1.21%)  events annotated
+
