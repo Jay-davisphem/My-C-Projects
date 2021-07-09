@@ -57,6 +57,15 @@ void stackPrint(const Stack *s){
   putchar('\n');
 }
 
+void stackPrintReversedRecursive(struct elt *first) {
+  static int ij = 0;
+  if(first != 0) { 
+    /* print the rest of the stack */
+    stackPrintReversedRecursive(first->next); 
+    /* then print the first element */  
+    printf("%d|%d ", first->value, ij++);
+  }
+}
 int main(int argc, char **argv){
 
   int i;
@@ -69,6 +78,10 @@ int main(int argc, char **argv){
     stackPush(&s, i);
     stackPrint(&s);
   }
+
+  puts(""); puts("");
+  stackPrintReversedRecursive(s);
+  puts(""); puts("");
 
   while(!stackEmpty(&s)){
     printf("pops %d\n", stackPop(&s));
